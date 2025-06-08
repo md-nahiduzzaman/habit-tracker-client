@@ -1,11 +1,10 @@
 {
-  "name": "My Mobile App",
-  "short_name": "MobileApp",
+  "name": "My PWA App",
+  "short_name": "PWA",
   "start_url": "/",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#ffffff",
-  "theme_color": "#0f172a",
+  "theme_color": "#317EFB",
   "icons": [
     {
       "src": "/icon-192x192.png",

@@ -9,15 +9,13 @@
 import withPWA from "next-pwa";
 import type { NextConfig } from "next";
 
-const baseConfig: NextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
 };
 
-const pwaConfig = {
+export default withPWA({
   dest: "public",
   register: true,
   skipWaiting: true,
-  disable: process.env.NODE_ENV === "development", // dev এ error এড়াতে
-};
-
-export default withPWA(pwaConfig)(baseConfig);
+  disable: process.env.NODE_ENV === "development" ? false : false, // dev mode on
+})(nextConfig);
