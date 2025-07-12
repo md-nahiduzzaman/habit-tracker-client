@@ -14,27 +14,35 @@ export default function WeekNavigation(props: WeekNavigationProps) {
 
   return (
     <div>
-      {/* week navigation */}
-      {/* pervious */}
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={() => setCurrentWeek(currentWeek - 1)}
-      >
-        Previous Week
-      </Button>
+      <div className="flex items-center justify-between mb-6">
+        {/* week navigation */}
+        {/* pervious */}
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => setCurrentWeek(currentWeek - 1)}
+        >
+          Previous Week
+        </Button>
 
-      {/* current week */}
-      <div>{currentWeek === 0 ? "This Week" : `Week ${currentWeek + 1}`}</div>
+        {/* current week */}
+        <div>
+          {currentWeek === 0
+            ? "This Week"
+            : `${Math.abs(currentWeek)} week${
+                Math.abs(currentWeek) === 1 ? "" : "s"
+              } ${currentWeek > 0 ? "ahead" : "ago"}`}
+        </div>
 
-      {/* next */}
-      <Button
-        variant="outline"
-        size="sm"
-        onClick={() => setCurrentWeek(currentWeek + 1)}
-      >
-        Next Week
-      </Button>
+        {/* next */}
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => setCurrentWeek(currentWeek + 1)}
+        >
+          Next Week
+        </Button>
+      </div>
 
       {/* week days header  */}
       <div>
@@ -42,9 +50,12 @@ export default function WeekNavigation(props: WeekNavigationProps) {
           {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
             (day, index) => (
               <div key={day} className="text-center py-2">
+                {/* day */}
                 <div className="text-xs font-medium text-slate-600 mb-1">
                   {day}
                 </div>
+
+                {/* date */}
                 <div
                   className={`text-sm font-semibold ${
                     formatDate(weekDates[index]) === today
