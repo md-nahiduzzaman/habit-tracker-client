@@ -8,7 +8,8 @@ import { formatDate } from "./dateUtils";
 export const getStreakCount = (habit: Habit): number => {
   const today = new Date();
   let streak = 0;
-  let currentDate = new Date(today);
+  // let currentDate = new Date(today);
+  const currentDate = new Date(today);
 
   while (true) {
     const dateString = formatDate(currentDate);
@@ -38,8 +39,8 @@ export const getStreakCount = (habit: Habit): number => {
  */
 export const getHabitStats = (habit: Habit): HabitStats => {
   const completions = Object.entries(habit.completions);
-  const successDays = completions.filter(([_, completed]) => completed).length;
-  const failedDays = completions.filter(([_, completed]) => !completed).length;
+  const successDays = completions.filter(([, completed]) => completed).length;
+  const failedDays = completions.filter(([, completed]) => !completed).length;
   const totalDays = completions.length;
 
   return {

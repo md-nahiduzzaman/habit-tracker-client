@@ -1,5 +1,4 @@
-import { Menu, Bell } from "lucide-react";
-import { formatCurrentDate } from "@/utils/dateUtils";
+import { Menu } from "lucide-react";
 
 interface HeaderProps {
   onMenuClick: () => void;

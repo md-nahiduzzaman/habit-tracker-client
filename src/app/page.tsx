@@ -17,7 +17,7 @@ import { useFailureTracking } from "@/hooks/useFailureTracking";
 
 // Utils and constants
 import { formatDate } from "@/utils/dateUtils";
-import { Habit, TimeOfDay } from "@/types/habit";
+import { Habit } from "@/types/habit";
 
 /**
  * Main habit tracker application component
@@ -37,6 +37,8 @@ export default function HabitTracker() {
   const [editingHabit, setEditingHabit] = useState<Habit | null>(null);
   const [selectedHabit, setSelectedHabit] = useState<Habit | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  console.log(editingHabit);
 
   // New habit form state
   const [newHabitName, setNewHabitName] = useState("");
@@ -69,6 +71,8 @@ export default function HabitTracker() {
     updateHabit(id, updates);
     setEditingHabit(null);
   };
+
+  console.log(handleUpdateHabit);
 
   /**
    * Navigate to habit details

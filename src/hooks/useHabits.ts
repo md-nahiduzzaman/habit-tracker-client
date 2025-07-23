@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Habit, TimeOfDay } from "@/types/habit";
+import { Habit } from "@/types/habit";
 import { getTimeOfDay } from "@/utils/timeUtils";
 
 /**

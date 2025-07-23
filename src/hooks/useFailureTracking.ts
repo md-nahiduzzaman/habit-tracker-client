@@ -45,6 +45,8 @@ export function useFailureTracking(
     const today = new Date();
     const todayString = formatDate(today);
 
+    console.log(todayString);
+
     habits.forEach((habit) => {
       const habitCreatedDate = new Date(habit.createdAt);
       const updatedCompletions = { ...habit.completions };
@@ -79,10 +81,10 @@ export function useFailureTracking(
   const getFailureStats = (habit: Habit) => {
     const completions = Object.entries(habit.completions);
     const failedDays = completions.filter(
-      ([_, completed]) => completed === false
+      ([, completed]) => completed === false
     ).length;
     const successDays = completions.filter(
-      ([_, completed]) => completed === true
+      ([, completed]) => completed === true
     ).length;
     const totalDays = completions.length;
 
