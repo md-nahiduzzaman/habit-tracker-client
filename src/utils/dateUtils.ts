@@ -1,8 +1,16 @@
+// Date utility functions
+
+/**
+ * Format date to YYYY-MM-DD string
+ */
 export const formatDate = (date: Date): string => {
   return date.toISOString().split("T")[0];
 };
 
-export const formateCurrentDate = () => {
+/**
+ * Format current date for display
+ */
+export const formatCurrentDate = () => {
   const currentDate = new Date();
   const days = [
     "Sunday",
@@ -32,10 +40,14 @@ export const formateCurrentDate = () => {
   const day = currentDate.getDate();
   const month = months[currentDate.getMonth()];
   const year = currentDate.getFullYear().toString().slice(-2);
-  return { dayName, dateString: `${day} ${month} '${year}` };
+
+  return { dayName, dateString: `${day} ${month}, ${year}` };
 };
 
-export const getCalenderDays = (month: Date): Date[] => {
+/**
+ * Get calendar days for a specific month
+ */
+export const getCalendarDays = (month: Date): Date[] => {
   const year = month.getFullYear();
   const monthIndex = month.getMonth();
 

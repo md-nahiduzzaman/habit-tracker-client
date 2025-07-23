@@ -1,11 +1,14 @@
-import { formateCurrentDate } from "@/utils/dateUtils";
+import { formatCurrentDate } from "@/utils/dateUtils";
 
-interface DateAndStatusProps {
+interface DateAndStatsProps {
   completionRate: number;
 }
 
-export default function DateAndStatus({ completionRate }: DateAndStatusProps) {
-  const { dayName, dateString } = formateCurrentDate();
+/**
+ * Display current date and completion statistics
+ */
+export default function DateAndStats({ completionRate }: DateAndStatsProps) {
+  const { dayName, dateString } = formatCurrentDate();
 
   return (
     <div className="flex items-center justify-between mb-8">

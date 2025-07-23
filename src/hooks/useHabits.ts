@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
 import { Habit, TimeOfDay } from "@/types/habit";
-import { useEffect, useState } from "react";
+import { getTimeOfDay } from "@/utils/timeUtils";
 
 /**
  * Custom hook for managing habits state and localStorage persistence
@@ -23,12 +24,13 @@ export function useHabits() {
   /**
    * Add a new habit
    */
-  const addHabit = (name: string, color: string, timeOfDay: TimeOfDay) => {
+  const addHabit = (name: string, alarmTime: string) => {
+    const timeOfDay = getTimeOfDay(alarmTime);
     const newHabit: Habit = {
       id: Date.now().toString(),
       name: name.trim(),
-      color,
       timeOfDay,
+      alarmTime,
       createdAt: new Date().toISOString(),
       completions: {},
     };

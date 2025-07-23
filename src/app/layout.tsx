@@ -26,9 +26,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
         <meta name="theme-color" content="#0f172a" />
       </head>
-      <body className={`${urbanist.className}`}>
-        {/* <Navigation /> */}
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <body className={urbanist.className}>
+        <div className="min-h-screen" style={{ backgroundColor: "#1D1D1D" }}>
           {children}
         </div>
       </body>
