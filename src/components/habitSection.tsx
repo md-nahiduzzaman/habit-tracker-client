@@ -1,7 +1,7 @@
 import { ChevronUp, ChevronDown } from "lucide-react";
 import { Habit, TimeOfDay } from "@/types/habit";
 import { timeColors } from "@/constants/colors";
-import HabitCard from "./HabitCard";
+import HabitCard from "./habitCard";
 
 interface HabitSectionProps {
   title: string;
