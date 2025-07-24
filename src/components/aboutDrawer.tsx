@@ -1,4 +1,4 @@
-import { Drawer, DrawerContent } from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
 import { ArrowLeft } from "lucide-react";
 
 interface AboutDrawerProps {
@@ -19,6 +19,9 @@ export default function AboutDrawer({ isOpen, onClose }: AboutDrawerProps) {
         className="h-full text-white border-none"
         style={{ backgroundColor: "#1D1D1D" }}
       >
+        {/* ✅ Accessibility: DrawerTitle must be present */}
+        <DrawerTitle className="sr-only">About Habit Tracker</DrawerTitle>
+
         <div className="h-full flex flex-col">
           {/* Header with back arrow */}
           <div className="flex items-center p-6">

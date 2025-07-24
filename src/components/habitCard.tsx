@@ -43,7 +43,7 @@ export default function HabitCard({
 
   return (
     <div
-      className="flex items-center justify-between p-4 rounded-2xl mb-3"
+      className="flex items-center justify-between p-4 rounded-full mb-3"
       style={{ backgroundColor: "#262626" }}
     >
       {/* Left side - Checkbox and habit details */}
@@ -74,7 +74,11 @@ export default function HabitCard({
 
         {/* Habit details */}
         <div className="flex-1">
-          <div className="text-white text-lg font-medium mb-1">
+          <div
+            className={`text-white text-lg font-medium mb-1 ${
+              completed ? "line-through" : ""
+            }`}
+          >
             {habit.name}
           </div>
           <div className="flex items-center gap-2">

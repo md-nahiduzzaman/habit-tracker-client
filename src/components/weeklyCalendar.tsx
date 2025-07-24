@@ -25,7 +25,7 @@ export default function WeeklyCalendar() {
             <div
               key={index}
               className={`
-                flex flex-col items-center justify-center w-12 h-16 rounded-2xl transition-colors
+                flex flex-col items-center justify-center w-12 h-16 rounded-full transition-colors
                 ${
                   isToday
                     ? "bg-yellow-500 text-black"

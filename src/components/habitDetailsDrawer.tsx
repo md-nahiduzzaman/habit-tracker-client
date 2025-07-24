@@ -196,7 +196,7 @@ export default function HabitDetailsDrawer({
           {/* Calendar */}
           <div className="flex-1 px-6 pb-6">
             {/* Calendar header */}
-            <div className="flex items-center justify-between mb-6">
+            {/* <div className="flex items-center justify-between mb-6">
               <button
                 onClick={goToPreviousMonth}
                 className="text-gray-400 hover:text-white transition-colors"
@@ -241,10 +241,10 @@ export default function HabitDetailsDrawer({
                   />
                 </svg>
               </button>
-            </div>
+            </div> */}
 
             {/* Calendar day headers */}
-            <div className="grid grid-cols-7 gap-1 mb-4">
+            {/* <div className="grid grid-cols-7 gap-1 mb-4">
               {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day) => (
                 <div
                   key={day}
@@ -253,10 +253,10 @@ export default function HabitDetailsDrawer({
                   {day}
                 </div>
               ))}
-            </div>
+            </div> */}
 
             {/* Calendar grid */}
-            <div className="grid grid-cols-7 gap-1">
+            {/* <div className="grid grid-cols-7 gap-1">
               {getCalendarDays(currentMonth).map((date, index) => {
                 const dateString = formatDate(date);
                 const isCompleted = habit.completions[dateString];
@@ -284,7 +284,7 @@ export default function HabitDetailsDrawer({
                   </button>
                 );
               })}
-            </div>
+            </div> */}
           </div>
         </div>
       </DrawerContent>
