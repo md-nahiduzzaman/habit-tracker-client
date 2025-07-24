@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Habit } from "@/types/habit";
 import { getStreakCount, getHabitStats } from "@/utils/habitUtils";
-import { getCalendarDays, formatDate } from "@/utils/dateUtils";
-import { useState } from "react";
+// import { formatDate } from "@/utils/dateUtils";
+// import { useState } from "react";
 
 interface HabitDetailsDrawerProps {
   isOpen: boolean;
@@ -33,10 +33,7 @@ export default function HabitDetailsDrawer({
   habit,
   onEdit,
   onDelete,
-  onToggleCompletion,
 }: HabitDetailsDrawerProps) {
-  const [currentMonth, setCurrentMonth] = useState(new Date());
-
   if (!habit) return null;
 
   const streak = getStreakCount(habit);
@@ -44,21 +41,7 @@ export default function HabitDetailsDrawer({
   const completionRate = Math.round(
     (stats.success / Math.max(stats.total, 1)) * 100
   );
-  const today = formatDate(new Date());
-
-  // Navigate to previous month
-  const goToPreviousMonth = () => {
-    const newDate = new Date(currentMonth);
-    newDate.setMonth(newDate.getMonth() - 1);
-    setCurrentMonth(newDate);
-  };
-
-  // Navigate to next month
-  const goToNextMonth = () => {
-    const newDate = new Date(currentMonth);
-    newDate.setMonth(newDate.getMonth() + 1);
-    setCurrentMonth(newDate);
-  };
+  // const today = formatDate(new Date());
 
   return (
     <Drawer open={isOpen} onOpenChange={onClose}>
