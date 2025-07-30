@@ -11,7 +11,9 @@ export default function Header({ onMenuClick }: HeaderProps) {
   return (
     <div className="flex items-center justify-between mb-6 px-1">
       {/* Left side - App Title */}
-      <h1 className="text-white text-xl font-medium">Habit Tracker</h1>
+      <h1 className="text-white text-2xl tracking-wide font-black">
+        Suluk <span className="text-gray-400 font-light">- Habit Tracker</span>
+      </h1>
 
       {/* Right side - Hamburger menu */}
       <button

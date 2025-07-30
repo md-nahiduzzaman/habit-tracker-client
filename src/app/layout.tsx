@@ -9,7 +9,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Habit Tracker - Build Better Habits",
+  title: "Suluk - Habit Tracker App",
   description:
     "Track your daily habits and build a better routine with our beautiful, mobile-first habit tracker.",
 };
@@ -24,6 +24,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        {/* <link rel="icon" href="/public/favicon.png" /> */}
         <meta name="theme-color" content="#0f172a" />
       </head>
       <body className={urbanist.className}>
