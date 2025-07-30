@@ -35,9 +35,9 @@ export default function AboutDrawer({ isOpen, onClose }: AboutDrawerProps) {
 
           {/* Centered content */}
           <div className="flex-1 flex items-center justify-center px-6">
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Habit Tracker v{appVersion}. © {currentYear} Habit Tracker App.
-              For support, contact support@habittracker.app
+            <p className="text-gray-300 text-sm text-center leading-relaxed">
+              Suluk - Habit Tracker v{appVersion}. © {currentYear} Suluk - Habit
+              Tracker App. For support, contact support@suluk.app
             </p>
           </div>
         </div>
